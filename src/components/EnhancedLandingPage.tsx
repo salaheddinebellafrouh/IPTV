@@ -88,28 +88,32 @@ const EnhancedLandingPage = () => {
       location: "New York, USA",
       rating: 5,
       text: "Amazing IPTV service! Crystal clear 4K streaming and incredible channel selection. The customer support is outstanding!",
-      plan: "Ultimate"
+      plan: "Ultimate",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b3fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     },
     {
       name: "Michael Chen",
       location: "Toronto, Canada", 
       rating: 5,
       text: "Best streaming service I've ever used. No buffering, great prices, and works perfectly on all my devices. Highly recommend!",
-      plan: "Premium"
+      plan: "Premium",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     },
     {
       name: "Emma Rodriguez",
       location: "London, UK",
       rating: 5,
       text: "Switched from cable and saved so much money! The variety of international channels is incredible. Installation was super easy.",
-      plan: "Basic"
+      plan: "Basic",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     },
     {
       name: "David Thompson",
       location: "Sydney, Australia",
       rating: 5,
       text: "Professional service with 24/7 support. The app works flawlessly on my smart TV. Worth every penny!",
-      plan: "Premium"
+      plan: "Premium",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
     }
   ];
 
@@ -346,55 +350,94 @@ const EnhancedLandingPage = () => {
       {/* Hero Section */}
       <section id="home" className="pt-24 pb-20">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="flex justify-center mb-6">
-              <div className="bg-blue-500/20 backdrop-blur-lg rounded-full p-4 border border-blue-500/30">
-                <Sparkles className="h-12 w-12 text-blue-400" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+              <div className="flex justify-center lg:justify-start mb-6">
+                <div className="bg-blue-500/20 backdrop-blur-lg rounded-full p-4 border border-blue-500/30">
+                  <Sparkles className="h-12 w-12 text-blue-400" />
+                </div>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">IPTV</span> Streaming
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Experience the future of television with <strong>15,000+ live channels</strong>, <strong>50,000+ movies</strong>, and <strong>ultra-fast 4K streaming</strong> on all your devices.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
+                <button
+                  onClick={() => scrollToSection('plans')}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-xl hover:shadow-2xl transform hover:scale-105"
+                >
+                  <Play className="h-5 w-5" />
+                  <span>Start Streaming Now</span>
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+                
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 backdrop-blur-lg hover:bg-white/10"
+                >
+                  Free Trial Available
+                </button>
+              </div>
+
+              <p className="text-sm text-gray-400">
+                ✅ No Contract • ✅ 7-Day Money Back Guarantee • ✅ Instant Activation
+              </p>
+            </div>
+
+            {/* Right Column - Hero Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Family watching IPTV sports on large screen TV"
+                  className="w-full h-[500px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                      <span className="text-white font-semibold">Live: Premier League Match</span>
+                    </div>
+                    <p className="text-gray-300 text-sm mt-1">4K Ultra HD • Crystal Clear</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating Stats */}
+              <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">15K+</div>
+                  <div className="text-xs text-gray-300">Live Channels</div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">4K</div>
+                  <div className="text-xs text-gray-300">Ultra HD Quality</div>
+                </div>
               </div>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">IPTV</span> Streaming
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Experience the future of television with <strong>15,000+ live channels</strong>, <strong>50,000+ movies</strong>, and <strong>ultra-fast 4K streaming</strong> on all your devices.
-            </p>
+          </div>
 
-            {/* Hero Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {stats.map((stat, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
-                  <div className="flex items-center justify-center mb-2 text-blue-400">
-                    {stat.icon}
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
+          {/* Hero Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                <div className="flex items-center justify-center mb-2 text-blue-400">
+                  {stat.icon}
                 </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={() => scrollToSection('plans')}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center space-x-2 shadow-xl hover:shadow-2xl transform hover:scale-105"
-              >
-                <Play className="h-5 w-5" />
-                <span>Start Streaming Now</span>
-                <ArrowRight className="h-5 w-5" />
-              </button>
-              
-              <button
-                onClick={() => navigate('/contact')}
-                className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 backdrop-blur-lg hover:bg-white/10"
-              >
-                Free Trial Available
-              </button>
-            </div>
-
-            <p className="text-sm text-gray-400 mt-6">
-              ✅ No Contract • ✅ 7-Day Money Back Guarantee • ✅ Instant Activation
-            </p>
+                <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                <div className="text-sm text-gray-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -494,6 +537,60 @@ const EnhancedLandingPage = () => {
             <p className="text-xl text-gray-300">
               Enjoy your favorite content anywhere, anytime. Our IPTV service works seamlessly across all platforms.
             </p>
+          </div>
+
+          {/* Device Usage Gallery */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="relative group">
+              <div className="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Person watching IPTV on smartphone"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20">
+                    <h3 className="text-white font-semibold">Mobile Streaming</h3>
+                    <p className="text-gray-300 text-sm">Watch on the go</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Family watching IPTV on smart TV in living room"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20">
+                    <h3 className="text-white font-semibold">Smart TV Experience</h3>
+                    <p className="text-gray-300 text-sm">4K quality for the family</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Person using IPTV on laptop computer"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20">
+                    <h3 className="text-white font-semibold">Desktop & Laptop</h3>
+                    <p className="text-gray-300 text-sm">Perfect for work breaks</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
@@ -660,6 +757,139 @@ const EnhancedLandingPage = () => {
         </div>
       </section>
 
+      {/* Sports Experience Section */}
+      <section className="py-20 bg-black/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ultimate <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Sports Experience</span>
+            </h2>
+            <p className="text-xl text-gray-300">
+              Never miss a match! Watch every goal, every game, every championship in stunning 4K quality.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            {/* Sports Content */}
+            <div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative rounded-xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Friends watching football match on TV"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="bg-red-500/90 backdrop-blur-sm rounded px-2 py-1 text-white text-xs font-semibold mb-1">
+                      🔴 LIVE
+                    </div>
+                    <p className="text-white text-sm font-medium">Champions League Final</p>
+                  </div>
+                </div>
+                
+                <div className="relative rounded-xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Family enjoying sports on big screen"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="bg-blue-500/90 backdrop-blur-sm rounded px-2 py-1 text-white text-xs font-semibold mb-1">
+                      4K UHD
+                    </div>
+                    <p className="text-white text-sm font-medium">Premier League</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-white mb-4">Premium Sports Channels</h3>
+                <div className="grid grid-cols-2 gap-3 text-sm text-gray-300">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    ESPN & ESPN+
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Fox Sports
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Sky Sports
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    beIN Sports
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    NBC Sports
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Eurosport
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Large Featured Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="People celebrating football goal while watching IPTV"
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                {/* Live Sports Overlay */}
+                <div className="absolute top-4 left-4 right-4">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-3 border border-white/20">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        <span className="text-white font-semibold text-sm">LIVE SPORTS</span>
+                      </div>
+                      <span className="text-white text-sm">4K • No Lag</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+                    <h3 className="text-white font-bold text-lg mb-1">Every Game, Every Goal</h3>
+                    <p className="text-gray-300 text-sm">Watch with friends in crystal-clear 4K quality</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sports Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
+              <div className="text-gray-300 text-sm">Sports Channels</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-gray-300 text-sm">Live Sports</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">4K</div>
+              <div className="text-gray-300 text-sm">Ultra HD Quality</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">0</div>
+              <div className="text-gray-300 text-sm">Buffering</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Channel Guide Preview Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -782,6 +1012,14 @@ const EnhancedLandingPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-center">
+                <div className="flex justify-center mb-6">
+                  <img 
+                    src={testimonials[currentTestimonial].avatar}
+                    alt={testimonials[currentTestimonial].name}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
+                  />
+                </div>
+                
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                     <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
