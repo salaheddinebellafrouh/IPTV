@@ -394,8 +394,8 @@ const EnhancedLandingPage = () => {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Family watching IPTV sports on large screen TV"
+                  src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Family watching football together on large screen TV"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
@@ -428,9 +428,9 @@ const EnhancedLandingPage = () => {
           </div>
 
           {/* Hero Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 text-center">
                 <div className="flex items-center justify-center mb-2 text-blue-400">
                   {stat.icon}
                 </div>
@@ -561,8 +561,8 @@ const EnhancedLandingPage = () => {
             <div className="relative group">
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Family watching IPTV on smart TV in living room"
+                  src="https://images.unsplash.com/photo-1593078068775-17d37635d87d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Happy family watching football together on smart TV in living room"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
@@ -578,8 +578,8 @@ const EnhancedLandingPage = () => {
             <div className="relative group">
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Person using IPTV on laptop computer"
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Professional using IPTV on laptop during work break"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
@@ -775,8 +775,8 @@ const EnhancedLandingPage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt="Friends watching football match on TV"
+                    src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Excited football fans celebrating goal during Champions League match"
                     className="w-full h-48 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
