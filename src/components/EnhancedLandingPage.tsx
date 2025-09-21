@@ -561,8 +561,8 @@ const EnhancedLandingPage = () => {
             <div className="relative group">
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1593078068775-17d37635d87d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Happy family watching football together on smart TV in living room"
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Family watching 4K content together on large smart TV in modern living room"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
@@ -578,8 +578,8 @@ const EnhancedLandingPage = () => {
             <div className="relative group">
               <div className="relative rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Professional using IPTV on laptop during work break"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Professional taking a work break watching IPTV on laptop in modern office"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
