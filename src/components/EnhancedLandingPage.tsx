@@ -958,14 +958,6 @@ const EnhancedLandingPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  <img 
-                    src={testimonials[currentTestimonial].avatar}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
-                  />
-                </div>
-                
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                     <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
