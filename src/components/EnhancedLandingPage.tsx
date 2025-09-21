@@ -539,60 +539,6 @@ const EnhancedLandingPage = () => {
             </p>
           </div>
 
-          {/* Device Usage Gallery */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="relative group">
-              <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Person watching IPTV on smartphone"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20">
-                    <h3 className="text-white font-semibold">Mobile Streaming</h3>
-                    <p className="text-gray-300 text-sm">Watch on the go</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Modern smart TV displaying IPTV interface in stylish living room"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20">
-                    <h3 className="text-white font-semibold">Smart TV Experience</h3>
-                    <p className="text-gray-300 text-sm">4K quality for the family</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="relative rounded-2xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                  alt="Professional using laptop for streaming during work break in modern office"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-3 border border-white/20">
-                    <h3 className="text-white font-semibold">Desktop & Laptop</h3>
-                    <p className="text-gray-300 text-sm">Perfect for work breaks</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {[
               { name: "Smart TV", icon: <Monitor className="h-12 w-12" /> },
